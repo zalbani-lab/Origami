@@ -1,7 +1,7 @@
-@use '../utilities/_variables' as *;
+@use './../utilities' as *;
 
-.test{
-    color: $color-blue;
+h1{
+    @include fontSize(100px);
 }
 
 .image{

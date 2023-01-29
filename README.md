@@ -16,7 +16,7 @@
 $ npm install
 
 # serve with hot reload at localhost:3000
-$ npm dev
+$ npm start
 ```
 
 ## Build
@@ -38,7 +38,7 @@ $ npm build
 │   ├─ reset
 │   ├─ utilities
 │   └─ main.scss
-└─ index.htm;               
+└─ index.html          
 ```
 
 ## Authors
