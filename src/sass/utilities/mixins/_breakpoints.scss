@@ -1,0 +1,18 @@
+@use './../variables/breakpoints' as *;
+
+ // Automatically add breakpoint media query
+ //
+ // @param $name - name of the breakpoint you want trigger 
+ // @options : xs, sm, md, lg, xl
+ //
+ // e.g. @include breakpoint(sm) { p { color: red;}}
+
+@mixin breakpoint($name) {
+    @if not map-has-key($breakpoints, $name) {
+      @warn "Warning: `#{$name}` is not a valid breakpoint name.";
+    } @else {
+      @media only screen and (max-width: map-get($breakpoints, $name)) {
+        @content;
+      }
+    }
+  }

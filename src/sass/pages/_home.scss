@@ -1,10 +1,12 @@
 @use './../utilities' as *;
 
 h1{
-    @include fontSize(100px);
+    @include fontSize(50px);
 }
 
 .image{
     max-width: 100%;
     max-height: 100vh;
 }
+
+@include breakpoint(sm) { h1 { color: red;}}
