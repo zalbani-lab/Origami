@@ -4,9 +4,9 @@
  //
  // @param $size - the value in pixel you want to convert
  //
- // e.g. p {@include fontSize(12px);}
+ // e.g. p { @include fontSize(12px);}
 
  @mixin fontSize($size) {
     font-size: $size;
-    font-size: calculateRem($size);
+    font-size: pxToRem($size);
   }
