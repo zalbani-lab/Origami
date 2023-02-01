@@ -5,6 +5,11 @@ h1{
     @include fontSize(500px);
     z-index: z-index(sidebar);
 }
+div.shorten{
+    display: inline-block;
+    width: 300px;
+    @include text-shorten(3);
+}
 
 .image{
     max-width: 100%;
