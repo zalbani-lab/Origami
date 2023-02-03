@@ -1,0 +1,11 @@
+// Define height and width
+//
+// @param $width
+// @param $height
+//
+// e.g. div { @include box(100px, 100px); }
+
+@mixin box($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
