@@ -1,5 +1,3 @@
-@use './box' as *;
-
 // Create a generic pseudo element
 //
 // @param $width
@@ -20,5 +18,6 @@
   content: $content;
   display: $display;
   position: $pos;
-  @include box($width, $height);
+  width: $width;
+  height: $height;
 }
