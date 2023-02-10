@@ -59,30 +59,65 @@ $colors: map-merge((
   "gray-dark":  $gray-800
 ), $colors);
 
-$default:       #172b4d !default;
-$primary:       #f7c109 !default;
-$primary-text:  black !default;
-$secondary:     #0073d1 !default;
-$secondary-text:white !default;
-$success:       $green !default;
-$info:          $blue !default;
-$warning:       $orange !default;
-$danger:        $red !default;
-$light:         $gray-500 !default;
-$dark:          $gray-900 !default;
-$darker:        darken($gray-900, 15%) !default;
+// Theme colors
+$themes: (
+  default: (
+    default: #172b4d,
+    primary:#f7c109,
+    primary-text:black,
+    secondary: #0073d1,
+    secondary-text:white,
+    success: $green,
+    info: $blue,
+    warning:$orange,
+    danger:$red,
+  ),
+  light: (
+    default: #172b4d,
+    primary:#c009f7,
+    primary-text:black,
+    secondary: #0073d1,
+    secondary-text:white,
+    success: $green,
+    info: $blue,
+    warning:$orange,
+    danger:$red,
+  ),
+  dark: (
+    default: #172b4d,
+    primary:#f70909,
+    primary-text:black,
+    secondary: #0073d1,
+    secondary-text:white,
+    success: $green,
+    info: $blue,
+    warning:$orange,
+    danger:$red,
+  ),
+);
 
-$theme-colors: () !default;
-$theme-colors: map-merge((
-  "default":      $default,
-  "primary":      $primary,
-  "secondary":    $secondary,
-  "success":      $success,
-  "info":         $info,
-  "warning":      $warning,
-  "danger":       $danger,
-  "white":        $white,
-  "neutral":      $white,
-  "dark":         $dark,
-  "darker":       $darker
-), $theme-colors);
+@each $themeName, $variables in $themes {
+  body {
+    @if $themeName == default {
+      @each $key, $value in $variables {
+          --#{$key}: #{$value};
+      }
+    } @else {
+      &.theme-#{$themeName} {
+        @each $key, $value in $variables {
+          --#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}
+
+$default: var(--default);
+$primary: var(--primary); 
+$primary-text: var(--primary-text);
+$secondary: var(--secondary);
+$secondary-text: var(--secondary-text);
+$success: var(--success);
+$info: var(--info);
+$warning: var(--warning);
+$danger: var(--danger);

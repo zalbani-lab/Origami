@@ -25,4 +25,4 @@ div {
     max-height: 100vh;
 }
 
-@include breakpoint(sm) { h1 { color: red;}}
+@include breakpoint(sm) { h1 { color: $color-primary;}}
