@@ -1,5 +1,9 @@
 @use './../utilities' as *;
 
+::placeholder {
+  color: gray;
+}
+
 h1 {
   position: absolute;
   @include fontSize(500px);
@@ -8,7 +12,6 @@ h1 {
 div {
   position: relative;
   &.shorten {
-    display: inline-block;
     width: 300px;
     @include text-shorten(3);
   }
