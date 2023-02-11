@@ -1,3 +1,7 @@
 {
-    "svg.preview.background": "transparent"
+  "svg.preview.background": "transparent",
+  "prettier.configPath": ".prettierrc.json",
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "editor.tabSize": 2
 }

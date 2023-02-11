@@ -16,7 +16,8 @@
     "serve": "browser-sync start --server public --files public",
     "start": "npm-run-all copy --parallel watch serve",
     "build": "npm-run-all copy:html build:*",
-    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map"
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "lint": "npx prettier --write ."
   },
   "dependencies": {
     "autoprefixer": "^10.4.2",
@@ -27,5 +28,8 @@
     "onchange": "^7.1.0",
     "postcss-cli": "^9.1.0",
     "sass": "^1.49.8"
+  },
+  "devDependencies": {
+    "prettier": "2.8.4"
   }
 }

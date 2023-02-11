@@ -1,28 +1,32 @@
 @use './../utilities' as *;
 
-h1{
-    position: absolute;
-    @include fontSize(500px);
-    z-index: z-index(sidebar);
+h1 {
+  position: absolute;
+  @include fontSize(500px);
+  z-index: z-index(sidebar);
 }
 div {
-    position: relative;
-    &.shorten{
-        display: inline-block;
-        width: 300px;
-        @include text-shorten(3);
-    }
-    &:after { 
-        @include pseudoElement(100px, 100px); 
-        top: 0;
-        right: 0;
-        background-color: purple;
-    }
+  position: relative;
+  &.shorten {
+    display: inline-block;
+    width: 300px;
+    @include text-shorten(3);
+  }
+  &:after {
+    @include pseudoElement(100px, 100px);
+    top: 0;
+    right: 0;
+    background-color: purple;
+  }
 }
 
-.image{
-    max-width: 100%;
-    max-height: 100vh;
+.image {
+  max-width: 100%;
+  max-height: 100vh;
 }
 
-@include breakpoint(sm) { h1 { color: $color-primary;}}
+@include breakpoint(sm) {
+  h1 {
+    color: $color-primary;
+  }
+}

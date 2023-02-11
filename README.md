@@ -6,7 +6,8 @@
   <a href="http://hits.dwyl.com/zalbani-lab/Origami" alt="HitCount"><img src="http://hits.dwyl.com/zalbani-lab/Origami.svg" /></a>
 </p>
 
-# Origami 
+# Origami
+
 > Some cool scss stuff
 
 ## Development setup
@@ -30,15 +31,15 @@ $ npm build
 
 ```bash
 .
-├─ assets                     
-├─ sass                      
+├─ assets
+├─ sass
 │   ├─ components
 │   ├─ layout
 │   ├─ pages
 │   ├─ reset
 │   ├─ utilities
 │   └─ main.scss
-└─ index.html          
+└─ index.html
 ```
 
 ## Authors
