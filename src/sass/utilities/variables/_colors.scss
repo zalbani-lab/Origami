@@ -103,13 +103,13 @@ $themes: (
 );
 
 @each $themeName, $variables in $themes {
-  body {
+  :root {
     @if $themeName == default {
       @each $key, $value in $variables {
         --#{$key}: #{$value};
       }
     } @else {
-      &.theme-#{$themeName} {
+      &.#{$themeName}-theme {
         @each $key, $value in $variables {
           --#{$key}: #{$value};
         }
