@@ -1,35 +1,79 @@
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-    <img src="./origami.svg" alt="origami logo" width="150px">
+  <a href="https://github.com/zalbani-lab/Origami">
+    <img src="./origami.svg" alt="origami logo" width="80px">
+  </a>
+
+  <h3 align="center">Origami</h3>
+
+  <p align="center">
+    An inventory of ready-to-use components (HTML / SASS).
+    <br />
+    <a href="https://github.com/zalbani-lab/Origami"><strong>Online example »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/zalbani-lab/Origami">View Documentation</a>
+    ·
+    <a href="https://github.com/zalbani-lab/Origami">Report Bug</a>
+    ·
+    <a href="https://github.com/zalbani-lab/Origami">Request Feature</a>
+  </p>
+  <hr/>
 </p>
-<p align="center">
-  <a href="https://github.com/zalbani-lab/Origami/commits/master" alt="LastCommit"><img src="https://img.shields.io/github/last-commit/zalbani-lab/Origami?style=flat-square" /></a>
-  <a href="http://hits.dwyl.com/zalbani-lab/Origami" alt="HitCount"><img src="http://hits.dwyl.com/zalbani-lab/Origami.svg" /></a>
-</p>
+<div align="center">
 
-# Origami
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-> Some cool scss stuff
+</div>
 
-## Development setup
+## 🧐 About The Project <a name = "about"></a>
 
-```bash
-# install dependencies
+The aim of this project is to save you from reinventing the wheel. You gonna find in this project all basic componenent you need for building your website. Each component has been designed to respect SEO and accessibility rules moreover, they are versatile and easily customizable (and are pretty by the way)
+
+### ⛏️ Built With
+
+- [SASS](https://sass-lang.com/)
+
+## 🏁 Getting Started <a name = "getting_started"></a>
+
+Follow these steps to get a local copy up and running.
+
+### 🔧 Prerequisites
+
+To proceed with the installation you must have previously installed :
+
+- [node](https://nodejs.org/en/download/)
+
+### 🚀 Installation
+
+1. Install dependencies
+
+```sh
 $ npm install
+```
 
-# serve with hot reload at localhost:3000
+2. Run server
+
+server with hot reload at [localhost:3000](http://localhost:3000)
+
+```sh
 $ npm start
 ```
 
-## Build
+3. Build (optional)
 
-```bash
-# generate static project for production create folder /public
+Generate static website. Will create a `/public` folder
+
+```sh
 $ npm build
 ```
 
-## File structure
+### 🎈 File structure
 
-```bash
+```sh
 .
 ├─ assets
 ├─ sass
@@ -42,6 +86,43 @@ $ npm build
 └─ index.html
 ```
 
-## Authors
+## 🚧 Roadmap <a name = "roadmap"></a>
 
-Alban Pierson – pro.pierson.alban@gmail.com
+- [x] Add basic mixins, functions and variable
+- [x] Theme
+- [ ] Create basic components (button, nav, cards ...)
+- [ ] Create advanced components (forms, sliders, animations ...)
+- [ ] Create documentation website
+- [ ] Create npm package ??
+
+more to come ...
+
+<!--
+## 📝 License <a name = "license"></a>
+
+Describe your License for your project.
+
+Distributed under the MIT License. See `LICENSE` for more information.
+-->
+
+## ✍️ Authors <a name = "authors"></a>
+
+Alban Pierson – [https://github.com/Zalbani/](https://github.com/Zalbani)
+
+<!--
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- References
+-->
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[forks-shield]: https://img.shields.io/github/forks/zalbani-lab/Origami?style=for-the-badge
+[forks-url]: https://github.com/zalbani-lab/Origami/network/members
+[stars-shield]: https://img.shields.io/github/stars/zalbani-lab/Origami?style=for-the-badge
+[stars-url]: https://github.com/zalbani-lab/Origami/stargazers
+[issues-shield]: https://img.shields.io/github/issues/zalbani-lab/Origami?style=for-the-badge
+[issues-url]: https://github.com/zalbani-lab/Origami/issues
