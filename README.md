@@ -31,11 +31,11 @@
 
 ## 🧐 About The Project <a name = "about"></a>
 
-The aim of this project is to save you from reinventing the wheel. You gonna find in this project all basic componenent you need for building your website. Each component has been designed to respect SEO and accessibility rules moreover, they are versatile and easily customizable (and are pretty by the way)
+The aim of this project is to save you from reinventing the wheel. You gonna find in this project all basic component you need for building your website. Each component has been designed to respect SEO and accessibility rules moreover, they are versatile and easily customizable (and are pretty by the way)
 
 ### ⛏️ Built With
 
-- [SASS](https://sass-lang.com/)
+- [SASS](https://sass-lang.com/) - CSS with superpowers. Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -45,7 +45,7 @@ Follow these steps to get a local copy up and running.
 
 To proceed with the installation you must have previously installed :
 
-- [node](https://nodejs.org/en/download/)
+- [node.js](https://nodejs.org/en/download/) - Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 ### 🚀 Installation
 
@@ -97,13 +97,9 @@ $ npm build
 
 more to come ...
 
-<!--
 ## 📝 License <a name = "license"></a>
 
-Describe your License for your project.
-
 Distributed under the MIT License. See `LICENSE` for more information.
--->
 
 ## ✍️ Authors <a name = "authors"></a>
 
