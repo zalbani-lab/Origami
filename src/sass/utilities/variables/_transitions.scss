@@ -1,7 +1,7 @@
-$transition-base: all 0.15s ease !default;
-$transition-fade: opacity 0.15s linear !default;
-$transition-collapse: height 0.35s ease !default;
+$duration-short: 0.15s;
+$duration-normal: 0.35s;
+$duration-long: 0.55s;
 
-$transition-duration-short: 0.15s !default;
-$transition-duration-base: 0.35s !default;
-$transition-duration-long: 0.55s !default;
+$base: all $duration-normal ease;
+$fade: opacity $duration-normal linear;
+$collapse: height $duration-normal ease;

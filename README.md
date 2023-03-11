@@ -10,7 +10,7 @@
   <p align="center">
     An inventory of ready-to-use components (HTML / SASS).
     <br />
-    <a href="https://github.com/zalbani-lab/Origami"><strong>Online example »</strong></a>
+    <a href="https://origami.zalbani.dev"><strong>Online example »</strong></a>
     <br />
     <br />
     <a href="https://github.com/zalbani-lab/Origami">View Documentation</a>
@@ -60,7 +60,7 @@ $ npm install
 server with hot reload at [localhost:3000](http://localhost:3000)
 
 ```sh
-$ npm start
+$ npm run start
 ```
 
 3. Build (optional)
