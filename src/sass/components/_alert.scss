@@ -1,13 +1,13 @@
 @use './../utilities' as *;
 
 .alert {
-  padding: 1rem;
-  padding-right: 3rem;
+  padding: $spacing-md;
+  padding-right: calc(3 * $spacing-md);
   background-color: $color-primary;
   width: 80%;
-  margin: 0.5rem auto;
+  margin: $spacing-sm auto;
   color: white;
-  border-radius: 0.5rem;
+  border-radius: $spacing-sm;
   position: relative;
   &__button {
     transition: $transition-base;
@@ -15,7 +15,7 @@
     right: 0;
     top: 0;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: $spacing-md;
     border: unset;
     background: unset;
     color: white;
