@@ -4,11 +4,6 @@
   color: gray;
 }
 
-h1 {
-  position: absolute;
-  @include fontSize(500px);
-  z-index: z-index(sidebar);
-}
 div {
   position: relative;
   &.shorten {
