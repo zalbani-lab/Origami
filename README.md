@@ -31,7 +31,7 @@
 
 ## 🧐 About The Project <a name = "about"></a>
 
-The aim of this project is to save you from reinventing the wheel. You gonna find in this project all basic component you need for building your website. Each component has been designed to respect SEO and accessibility rules moreover, they are versatile and easily customizable (and are pretty by the way)
+The aim of this project is to save you from reinventing the wheel. It's a small design system with all basic component you need for building your website. Each component has been designed to respect SEO and accessibility rules moreover, they are versatile and easily customizable (and are pretty by the way).
 
 ### ⛏️ Built With
 
