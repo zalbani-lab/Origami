@@ -1,0 +1,17 @@
+@use './../utilities' as *;
+
+@each $name, $color in $color-grays {
+  .color--gray {
+    &-#{$name} {
+      @include dynamicColor($color);
+    }
+  }
+}
+
+@each $name, $color in $color-colors {
+  .color--color {
+    &-#{$name} {
+      @include dynamicColor($color);
+    }
+  }
+}

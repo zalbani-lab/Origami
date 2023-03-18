@@ -1,0 +1,13 @@
+// Determine the color of the text
+//
+// @param $backgroundColor - background color of behind the text
+//
+// e.g. p { background-color: #000; color: textColor(#000); }
+
+@function textColor($backgroundColor) {
+  @if (lightness($backgroundColor) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
