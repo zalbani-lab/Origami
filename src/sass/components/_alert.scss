@@ -10,6 +10,7 @@
   border-radius: $spacing-sm;
   position: relative;
   &__button {
+    cursor: pointer;
     transition: $transition-base;
     position: absolute;
     right: 0;

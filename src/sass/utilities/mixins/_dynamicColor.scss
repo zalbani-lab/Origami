@@ -1,5 +1,11 @@
 @use './../functions/textColor' as *;
 
+// Set background color and text color
+//
+// @param $backgroundColor - backgroundColor wanted
+//
+// e.g. p { @include dynamicColor(red); }
+
 @mixin dynamicColor($backgroundColor) {
   background: $backgroundColor;
   color: textColor($backgroundColor);

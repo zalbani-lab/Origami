@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Origami</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="icon" href="/assets/origami.svg" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="./components.html">Components</a></li>
+        <li><a href="./colors.html">Colors</a></li>
+        <li><a href="./typographies.html">Typographies</a></li>
+        <li><a href="./variables.html">Variables</a></li>
+        <li><a href="./icons.html">Icons</a></li>
+        <li><a href="https://github.com/zalbani-lab/Origami">Github</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>Icones</h1>
+      <hr />
+      <h1>Feather</h1>
+      <ul id="iconList"></ul>
+    </main>
+  </body>
+  <script>
+    fetch('/assets/fonts/featherIcons.json')
+      .then((response) => {
+        return response.json()
+      })
+      .then((data) => printAllIcons(data))
+
+    const iconList = document.getElementById('iconList')
+    const iconHTMLElementTemplate = `<span class="icon-%icon-name%"></span><span>%icon-name%</span>`
+
+    function printAllIcons(icons) {
+      icons.forEach((icon) => {
+        const li = document.createElement('li')
+        const iconElement = iconHTMLElementTemplate.replaceAll(
+          '%icon-name%',
+          icon.properties.name
+        )
+        li.appendChild(stringToHTML(iconElement))
+        iconList.appendChild(li)
+      })
+    }
+
+    const parser = new DOMParser()
+    function stringToHTML(str) {
+      const doc = parser.parseFromString(str, 'text/html')
+      return doc.body
+    }
+  </script>
+</html>
