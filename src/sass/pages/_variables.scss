@@ -1,0 +1,15 @@
+@use './../utilities' as *;
+
+.shadow {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+@each $name, $properties in $shadow-shadows {
+  .shadow-#{$name} {
+    box-shadow: $properties;
+  }
+}
