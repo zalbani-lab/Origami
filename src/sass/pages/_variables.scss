@@ -1,11 +1,15 @@
 @use './../utilities' as *;
 
+.shadowContainer {
+  background-color: #ff7777;
+  padding: 20px;
+}
 .shadow {
   display: inline-block;
   width: 100px;
   height: 100px;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 @each $name, $properties in $shadow-shadows {
