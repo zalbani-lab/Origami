@@ -1,0 +1,70 @@
+* {
+  --shadowColorHue: 0deg;
+  --shadowColorSaturation: 0%;
+  --shadowColorLight: 50%;
+}
+
+$small: 0.5px 1px 1px
+  hsla(
+    var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+      0.7
+  );
+$medium: 1px 2px 2px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.333
+    ),
+  2px 4px 4px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.333
+    ),
+  3px 6px 6px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.333
+    );
+
+$large: 1px 2px 2px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.2
+    ),
+  2px 4px 4px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.2
+    ),
+  4px 8px 8px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.2
+    ),
+  8px 16px 16px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.2
+    ),
+  16px 32px 32px
+    hsla(
+      var(--shadowColorHue) var(--shadowColorSaturation) var(--shadowColorLight) /
+        0.2
+    );
+
+$shadows: ();
+$shadows: map-merge(
+  (
+    'small': $small,
+    'medium': $medium,
+    'large': $large,
+  ),
+  $shadows
+);
+
+@mixin dynamicShadow($size, $shadowColor) {
+  --shadowColorHue: #{hue($shadowColor)};
+  --shadowColorSaturation: #{saturation($shadowColor)};
+  --shadowColorLight: #{lightness($shadowColor)};
+
+  box-shadow: map-get($shadows, $size);
+}

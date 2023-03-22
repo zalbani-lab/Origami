@@ -14,6 +14,6 @@
 
 @each $name, $properties in $shadow-shadows {
   .shadow-#{$name} {
-    box-shadow: $properties;
+    @include dynamicShadow($name, hsl(71, 100%, 64%));
   }
 }
