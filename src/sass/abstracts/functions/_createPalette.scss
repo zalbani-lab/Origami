@@ -1,0 +1,23 @@
+/// Create color palette.
+///
+/// @param {String} $color - base color
+/// @return {Map} - all base color shades
+///
+/// @example - h1 { font-size: pxToRem(50px); }
+
+$color--interval: 7.6%;
+
+@function createPalette($color) {
+  $palette: (
+    100: lighten($color, $color--interval * 4),
+    200: lighten($color, $color--interval * 3),
+    300: lighten($color, $color--interval * 2),
+    400: lighten($color, $color--interval),
+    500: $color,
+    600: darken($color, $color--interval),
+    700: darken($color, $color--interval * 2),
+    800: darken($color, $color--interval * 3),
+    900: darken($color, $color--interval * 4),
+  );
+  @return $palette;
+}

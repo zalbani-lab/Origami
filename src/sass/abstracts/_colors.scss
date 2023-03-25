@@ -1,0 +1,133 @@
+@use './functions/createPalette' as *;
+
+// Important colors
+$primary: #0081a7;
+$secondary: #f07167;
+$bgColor: #f8f9fe;
+
+// All colors
+$blue: #5e72e4;
+$indigo: #5603ad;
+$purple: #8965e0;
+$pink: #f3a4b5;
+$red: #db1a3e;
+$orange: #ffbb29;
+$yellow: #ffd600;
+$green: #8ec770;
+$teal: #11cdef;
+$cyan: #2bffc6;
+
+$colors: ();
+$colors: map-merge(
+  (
+    'primary': $primary,
+    'secondary': $secondary,
+    'blue': $blue,
+    'indigo': $indigo,
+    'purple': $purple,
+    'pink': $pink,
+    'red': $red,
+    'orange': $orange,
+    'yellow': $yellow,
+    'green': $green,
+    'teal': $teal,
+    'cyan': $cyan,
+  ),
+  $colors
+);
+
+$palettePrimary: createPalette($primary);
+$paletteSecondary: createPalette($secondary);
+$paletteBlue: createPalette($blue);
+$paletteIndigo: createPalette($indigo);
+$palettePurple: createPalette($purple);
+$palettePink: createPalette($pink);
+$paletteRed: createPalette($red);
+$paletteOrange: createPalette($orange);
+$paletteYellow: createPalette($yellow);
+$paletteGreen: createPalette($green);
+$paletteTeal: createPalette($teal);
+$paletteCyan: createPalette($cyan);
+
+$palettes: ();
+$palettes: map-merge(
+  (
+    'primary': $palettePrimary,
+    'secondary': $paletteSecondary,
+    'blue': $paletteBlue,
+    'indigo': $paletteIndigo,
+    'purple': $palettePurple,
+    'pink': $palettePink,
+    'red': $paletteRed,
+    'orange': $paletteOrange,
+    'yellow': $paletteYellow,
+    'green': $paletteGreen,
+    'teal': $paletteTeal,
+    'cyan': $paletteCyan,
+  ),
+  $palettes
+);
+
+// Test theme
+$default: var(--default);
+$primary: var(--primary);
+$primary-text: var(--primary-text);
+$secondary: var(--secondary);
+$secondary-text: var(--secondary-text);
+$success: var(--success);
+$info: var(--info);
+$warning: var(--warning);
+$danger: var(--danger);
+
+// Theme colors
+$themes: (
+  default: (
+    default: #172b4d,
+    primary: #f7c109,
+    primary-text: black,
+    secondary: #0073d1,
+    secondary-text: white,
+    success: $green,
+    info: $blue,
+    warning: $orange,
+    danger: $red,
+  ),
+  light: (
+    default: #172b4d,
+    primary: #c009f7,
+    primary-text: black,
+    secondary: #0073d1,
+    secondary-text: white,
+    success: $green,
+    info: $blue,
+    warning: $orange,
+    danger: $red,
+  ),
+  dark: (
+    default: #172b4d,
+    primary: #f70909,
+    primary-text: black,
+    secondary: #0073d1,
+    secondary-text: white,
+    success: $green,
+    info: $blue,
+    warning: $orange,
+    danger: $red,
+  ),
+);
+
+@each $themeName, $variables in $themes {
+  :root {
+    @if $themeName == default {
+      @each $key, $value in $variables {
+        --#{$key}: #{$value};
+      }
+    } @else {
+      &.#{$themeName}-theme {
+        @each $key, $value in $variables {
+          --#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}
