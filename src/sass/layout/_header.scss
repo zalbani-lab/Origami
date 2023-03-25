@@ -4,6 +4,7 @@ header {
 }
 
 .menu {
+  background-color: white;
   display: flex;
   margin: 0;
   padding: $spacing-lg;
@@ -12,7 +13,7 @@ header {
   justify-content: space-between;
   &__item {
     &--active {
-      color: $color-primary;
+      color: map-get($color-palettePrimary, 300);
     }
   }
 }

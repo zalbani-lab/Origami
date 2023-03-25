@@ -1,0 +1,5 @@
+@use './../abstracts/' as *;
+
+html {
+  background-color: $color-backgroundColor;
+}

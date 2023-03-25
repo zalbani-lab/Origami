@@ -1,6 +1,7 @@
 /// Set background color and text color
 ///
-/// @param $backgroundColor - backgroundColor wanted
+/// @param $size - shadow size : small, medium, large
+/// @param $backgroundColor - backgroundColor
 ///
 /// e.g. p { @include dynamicShadow(red); }
 
@@ -67,10 +68,16 @@ $shadows: map-merge(
   $shadows
 );
 
-@mixin dynamicShadow($size: 'small', $shadowColor: hsl(0, 0%, 50%)) {
-  --shadowColorHue: #{hue($shadowColor)};
-  --shadowColorSaturation: #{saturation($shadowColor)};
-  --shadowColorLight: #{lightness($shadowColor)};
+@mixin dynamicShadow($size: 'small', $backgroundColor: hsl(0, 0%, 100%)) {
+  $_shadowColor: desaturate(
+    $backgroundColor,
+    (saturation($backgroundColor) * 0.4)
+  );
+  $_shadowColor: darken($_shadowColor, (lightness($backgroundColor) * 0.375));
+
+  --shadowColorHue: #{hue($_shadowColor)};
+  --shadowColorSaturation: #{saturation($_shadowColor)};
+  --shadowColorLight: #{lightness($_shadowColor)};
 
   box-shadow: map-get($shadows, $size);
 }

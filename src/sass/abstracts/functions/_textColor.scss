@@ -2,12 +2,12 @@
 //
 // @param $backgroundColor - background color of behind the text
 //
-// e.g. p { background-color: #000; color: textColor(#000); }
+// e.g. p { background-color: black; color: textColor(black); }
 
 @function textColor($backgroundColor) {
   @if (lightness($backgroundColor) > 50) {
-    @return #000;
+    @return hsl(0, 0%, 0%);
   } @else {
-    @return #fff;
+    @return hsl(0, 0%, 100%);
   }
 }

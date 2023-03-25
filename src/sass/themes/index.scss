@@ -21,8 +21,8 @@ $themes: (
     danger: $color-red,
   ),
   dark: (
-    primary: #f70909,
-    secondary: #0073d1,
+    primary: hsl(0, 94%, 50%),
+    secondary: hsl(207, 100%, 41%),
     success: $color-green,
     info: $color-blue,
     warning: $color-orange,

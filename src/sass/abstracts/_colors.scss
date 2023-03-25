@@ -1,21 +1,21 @@
 @use './functions/createPalette' as *;
 
 // Important colors
-$primary: #0081a7;
-$secondary: #f07167;
-$bgColor: #f8f9fe;
+$primary: hsl(4, 82%, 67%);
+$secondary: hsl(220, 100%, 80%);
+$backgroundColor: hsl(230, 75%, 98%);
 
 // All colors
-$blue: #5e72e4;
-$indigo: #5603ad;
-$purple: #8965e0;
-$pink: #f3a4b5;
-$red: #db1a3e;
-$orange: #ffbb29;
-$yellow: #ffd600;
-$green: #8ec770;
-$teal: #11cdef;
-$cyan: #2bffc6;
+$blue: hsl(231, 71%, 63%);
+$indigo: hsl(269, 97%, 35%);
+$purple: hsl(258, 66%, 64%);
+$pink: hsl(347, 77%, 80%);
+$red: hsl(349, 79%, 48%);
+$orange: hsl(41, 100%, 58%);
+$yellow: hsl(50, 100%, 50%);
+$green: hsl(99, 44%, 61%);
+$teal: hsl(189, 87%, 50%);
+$cyan: hsl(164, 100%, 58%);
 
 $colors: ();
 $colors: map-merge(

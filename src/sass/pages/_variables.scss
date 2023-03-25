@@ -1,7 +1,7 @@
 @use './../abstracts' as *;
 
 .shadowContainer {
-  background-color: #ff7777;
+  background-color: $color-secondary;
   padding: 20px;
 }
 .shadow {
@@ -14,6 +14,6 @@
 
 @each $name, $properties in $shadow-shadows {
   .shadow-#{$name} {
-    @include dynamicShadow($name, hsl(71, 100%, 64%));
+    @include dynamicShadow($name, $color-secondary);
   }
 }
