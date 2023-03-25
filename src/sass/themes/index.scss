@@ -1,0 +1,47 @@
+@use './../abstracts' as *;
+
+$default: var(--default);
+$primary: var(--primary);
+$primary-text: var(--primary-text);
+$secondary: var(--secondary);
+$secondary-text: var(--secondary-text);
+$success: var(--success);
+$info: var(--info);
+$warning: var(--warning);
+$danger: var(--danger);
+
+// Theme colors
+$themes: (
+  light: (
+    primary: $color-primary,
+    secondary: $color-secondary,
+    success: $color-green,
+    info: $color-blue,
+    warning: $color-orange,
+    danger: $color-red,
+  ),
+  dark: (
+    primary: #f70909,
+    secondary: #0073d1,
+    success: $color-green,
+    info: $color-blue,
+    warning: $color-orange,
+    danger: $color-red,
+  ),
+);
+
+@each $themeName, $variables in $themes {
+  :root {
+    @if $themeName == default {
+      @each $key, $value in $variables {
+        --#{$key}: #{$value};
+      }
+    } @else {
+      &.#{$themeName}-theme {
+        @each $key, $value in $variables {
+          --#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}

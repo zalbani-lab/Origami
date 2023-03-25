@@ -1,7 +1,7 @@
-$duration-short: 0.15s;
-$duration-normal: 0.35s;
-$duration-long: 0.55s;
+$durationShort: 0.15s;
+$durationNormal: 0.35s;
+$durationLong: 0.55s;
 
-$base: all $duration-normal ease;
-$fade: opacity $duration-normal linear;
-$collapse: height $duration-normal ease;
+$base: all $durationNormal ease;
+$fade: opacity $durationNormal linear;
+$collapse: height $durationNormal ease;

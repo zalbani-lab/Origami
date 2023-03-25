@@ -1,3 +1,9 @@
+/// Set background color and text color
+///
+/// @param $backgroundColor - backgroundColor wanted
+///
+/// e.g. p { @include dynamicShadow(red); }
+
 * {
   --shadowColorHue: 0deg;
   --shadowColorSaturation: 0%;
@@ -61,7 +67,7 @@ $shadows: map-merge(
   $shadows
 );
 
-@mixin dynamicShadow($size, $shadowColor) {
+@mixin dynamicShadow($size: 'small', $shadowColor: hsl(0, 0%, 50%)) {
   --shadowColorHue: #{hue($shadowColor)};
   --shadowColorSaturation: #{saturation($shadowColor)};
   --shadowColorLight: #{lightness($shadowColor)};

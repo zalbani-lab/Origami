@@ -1,0 +1,11 @@
+@use './../abstracts' as *;
+
+a {
+  color: unset;
+  text-decoration: none;
+  transition: $transition-base;
+  transition-duration: $transition-durationShort;
+  &:hover {
+    color: $color-primary;
+  }
+}

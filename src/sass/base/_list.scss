@@ -1,0 +1,7 @@
+@use './../abstracts' as *;
+
+ul {
+  margin: $spacing-lg;
+  padding: 0;
+  list-style: none;
+}

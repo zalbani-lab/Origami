@@ -1,9 +1,11 @@
-$unit: 1rem;
+@use './../functions/pxToRem' as *;
 
-$xxs: calc(0.25 * $unit);
-$xs: calc(0.5 * $unit);
-$sm: calc(0.75 * $unit);
-$md: calc(1 * $unit);
-$lg: calc(1.5 * $unit);
-$xl: calc(2 * $unit);
-$xxl: calc(2.5 * $unit);
+$_baseUnit: pxToRem(16px);
+
+$xxs: calc(0.25 * $_baseUnit); // 4px
+$xs: calc(0.5 * $_baseUnit); // 8px
+$sm: calc(0.75 * $_baseUnit); // 12px
+$md: calc(1 * $_baseUnit); // 16px
+$lg: calc(1.5 * $_baseUnit); // 24px
+$xl: calc(2 * $_baseUnit); // 32px
+$xxl: calc(2.5 * $_baseUnit); // 40px
