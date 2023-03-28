@@ -1,3 +1,70 @@
-* {
-  font-family: Roboto, sans-serif;
+// Font declaration
+@font-face {
+  font-family: 'Baskerville';
+  font-weight: 400;
+  src: url('/assets/fonts/baskerville/baskerville-regular.woff2')
+      format('woff2'),
+    url('/assets/fonts/baskerville/baskerville-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/assets/fonts/baskerville/baskerville-italic.woff2') format('woff2'),
+    url('/assets/fonts/baskerville/baskerville-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Baskerville';
+  font-weight: 900;
+  src: url('/assets/fonts/baskerville/baskerville-bold.woff2') format('woff2'),
+    url('/assets/fonts/baskerville/baskerville-bold.woff') format('woff');
+}
+
+// Typography variables
+$_fontFamilyPrimary: 'Baskerville', serif;
+$_fontFamilySecondary: 'Baskerville', serif;
+
+$_textBaseSize: 1em;
+$_textScaleRatio: 1.2;
+
+$_fontSize-xs: calc($_textBaseSize / ($_textScaleRatio * 2));
+$_fontSize-sm: calc($_textBaseSize / $_textScaleRatio);
+$_fontSize-md: $_textBaseSize;
+$_fontSize-lg: calc($_textBaseSize * $_textScaleRatio);
+$_fontSize-xl: calc($_textBaseSize * ($_textScaleRatio * 2));
+$_fontSize-xxl: calc($_textBaseSize * ($_textScaleRatio * 3));
+
+body {
+  font-size: $_textBaseSize;
+  font-family: $_fontFamilyPrimary;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $_fontFamilySecondary;
+  font-style: 900;
+}
+h1 {
+  font-size: $_fontSize-xxl;
+}
+
+h2 {
+  font-size: $_fontSize-xl;
+}
+
+h3 {
+  font-size: $_fontSize-lg;
+}
+
+.text--sm {
+  font-size: $_fontSize-sm;
+}
+
+.text--xs {
+  font-size: $_fontSize-xs;
 }
