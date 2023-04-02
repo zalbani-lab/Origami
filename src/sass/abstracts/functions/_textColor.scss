@@ -1,8 +1,12 @@
-// Determine the color of the text
-//
-// @param $backgroundColor - background color of behind the text
-//
-// e.g. p { background-color: black; color: textColor(black); }
+/// Determine the color of the text
+///
+/// @param {String} $backgroundColor - text background color
+/// @return {String} color (black or white)
+///
+/// @example scss - textColor function
+///   textColor($backgroundColor: black);
+///   // white
+///
 
 @function textColor($backgroundColor) {
   @if (lightness($backgroundColor) > 50) {

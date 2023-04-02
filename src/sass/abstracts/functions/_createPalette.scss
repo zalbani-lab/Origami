@@ -1,9 +1,11 @@
 /// Create color palette.
 ///
-/// @param {String} $color - base color
-/// @return {Map} - all base color shades
+/// @param {String} $color - base color to decline
+/// @return {Map} all base color shades
 ///
-/// @example - $palettePrimary: createPalette(red);
+/// @example scss - createPalette function
+///   createPalette($color: red);
+///
 
 $_colorInterval: 7%;
 

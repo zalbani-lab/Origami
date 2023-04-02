@@ -1,14 +1,17 @@
+/// Set z-index
+///
+/// @param {String} $name - name of the component you want to set z-index, available options : modal and sidebar.
+/// @return {Number} z-index number
+///
+/// @example scss - zIndex function
+///   zIndex($name: 'sidebar');
+///   // 1
+///
+
 // order from foreground to background
 $z-indexes: ('modal', 'sidebar');
 
-// Set z-index
-//
-// @param $name - name of the component you want to set z-index
-// @options : modal, sidebar
-//
-// e.g. header { z-index: z-index(sidebar); }
-
-@function z-index($name) {
+@function zIndex($name) {
   @if index($z-indexes, $name) {
     @return (length($z-indexes) - index($z-indexes, $name))+1;
   } @else {
