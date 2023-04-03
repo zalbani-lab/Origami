@@ -1,3 +1,14 @@
+/// Automatically add breakpoint media query
+///
+/// @param {String} $name - name of the breakpoint you want trigger, available options : xs, sm, md, lg, xl and xxl
+/// @content all css you need to be apply inside the media query
+/// @output create media query
+///
+/// @example breakpoint mixin
+///   @include breakpoint(sm) { p { color: red;}}
+///   // @media only screen and (min-width: 34rem) { p { color: red;} }
+///
+
 $breakpoints: (
   'xs': 25rem,
   // 400px
@@ -9,15 +20,9 @@ $breakpoints: (
   // 960px
   'xl': 80rem,
   // 1280px
-  'xxl': 90rem // 1440px,
+  'xxl': 90rem,
+  // 1440px
 );
-
-// Automatically add breakpoint media query
-//
-// @param $name - name of the breakpoint you want trigger
-// @options : xs, sm, md, lg, xl, xxl
-//
-// e.g. @include breakpoint(sm) { p { color: red;}}
 
 @mixin breakpoint($name) {
   @if not map-has-key($breakpoints, $name) {

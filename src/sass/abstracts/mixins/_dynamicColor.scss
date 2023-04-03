@@ -1,10 +1,15 @@
-@use './../functions/textColor' as *;
+/// Set background color and text color
+///
+/// @param {String} $backgroundColor - backgroundColor wanted
+/// @output background and color properties
+///
+/// @example dynamicColor mixin
+///   @include dynamicColor(black)
+///   // background: black;
+///   // color: white;
+///
 
-// Set background color and text color
-//
-// @param $backgroundColor - backgroundColor wanted
-//
-// e.g. p { @include dynamicColor(red); }
+@use './../functions/textColor' as *;
 
 @mixin dynamicColor($backgroundColor) {
   background: $backgroundColor;

@@ -1,9 +1,11 @@
-/// Set background color and text color
+/// Set shadow size and color
 ///
-/// @param $size - shadow size : small, medium, large
-/// @param $backgroundColor - backgroundColor
+/// @param {String} $size [small] - shadow size, available options : small, medium, large
+/// @param {String} $backgroundColor [hsl(0, 0%, 100%)] - color behind the shadow
 ///
-/// e.g. p { @include dynamicShadow(red); }
+/// @example dynamicShadow mixin
+///   @include dynamicShadow(red)
+///
 
 * {
   --shadowColorHue: 0deg;
