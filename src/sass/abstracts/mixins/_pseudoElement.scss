@@ -1,23 +1,26 @@
-// Create a generic pseudo element
-//
-// @param $width
-// @param $height
-// @param $display
-// @param $pos
-// @param $content
-//
-// e.g. &:after { @include pseudoElement(100px, 100px); }
+/// Create a generic pseudo element
+///
+/// @param {String} $width [100%] - Width of pseudo element
+/// @param {String} $height [100%] - height of pseudo element
+/// @param {String} $display [inline-block] - display of pseudo element
+/// @param {String} $position [absolute] - position of pseudo element
+/// @param {String} $content [''] - content of pseudo element
+///
+/// @example pseudoElement mixin
+///   @include pseudoElement(100px, 100px);
+///   // content: ''; display: inline-block; position: absolute; width: 100px; height: 100px;
+///
 
 @mixin pseudoElement(
   $width: 100%,
   $height: 100%,
   $display: inline-block,
-  $pos: absolute,
+  $position: absolute,
   $content: ''
 ) {
   content: $content;
   display: $display;
-  position: $pos;
+  position: $position;
   width: $width;
   height: $height;
 }

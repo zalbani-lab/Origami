@@ -1,10 +1,12 @@
-// Shorten text at a specific line number
-//
-// @param $numLines - The line number you want to shorten text
-//
-// e.g. div { @include text-shorten(3); }
+/// Shorten text at a specific line number
+///
+/// @param {String} $numLines [1] - The line number you want to shorten text
+///
+/// @example textShorten mixin
+///   @include text-shorten(3);
+///
 
-@mixin text-shorten($numLines: 1) {
+@mixin textShorten($numLines: 1) {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
